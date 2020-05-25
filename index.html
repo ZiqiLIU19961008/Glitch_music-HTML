@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  
+  <head>
+    
+    <title>The very friendly AI</title>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+    <script src="/script.js" defer></script>
+    
+  </head>  
+  
+  
+  <body>
+    
+    <h1 id="bigtitle" >Hi there !</h1>
+    <h2> <i class="fas fa-play"></i> The project</h2>
+    
+    <h3>
+      The concept
+    </h3>
+    
+    <p id="intro">
+      For the Designing with Web's class, I've chosen the <b>Artificial Intelligence assignment</b>. Here I'm gonna experiment a new application using AI and Machine Learning. I hope you'll have fun, so please grab your EarPods and make yourself at home !
+    </p>
+    <p>
+      If you saw my precedent <a href="https://the-very-cool-project.glitch.me/" class="link" target="blank"> very cool project</a> you know that I'm a huge fan of music. As I am very predictable, my project will focus on music. More precisely, I want to create an <b> application where you can upload music with an AI able to find its musical genre </b>(i.e : soul, disco, classical, etc.). </p>
+      <iframe src="https://giphy.com/embed/l4FGJ3kA7GS3qivhS" width="360" height="270" frameborder="0" class="giphy-embed" allowfullscreen alt="Are you gonna beat Shazam"></iframe>
+       
+  
+    <h3>The goal</h3>
+    
+    <p>
+      My project, I think, could be useful in different fields : 
+    <ol>
+      <li>As a pedagogical platform, it can help people to satisfy their musical's personal curiosity and to extend their comprehension of music;</li>
+      <li>As a business tool, it can help companies like Spotify or Deezer for example to classify songs automatically and to make more relevant personalized playlists for their users; </li>
+      <li>As an open and friendly AI, it can help indexing numerous musics in a publical database for the common knowledge.</li>
+      
+    </ol>
+    </p>
+    
+    <h2><i class="fas fa-play"></i> First things first</h2>
+    
+    <h3>What is a musical genre ?</h3>
+     <p>
+It's a classification that allows to put a music in a specific category. The musical's genre of a song depend, according to <a href="https://www.definitions.net/definition/music+genre" target="blank" class="link">definiton.net</a>, of "<em>the musical techniques, the styles, the context, the content, the spirit </em>" and the geograhical origin. The matter is that sometimes the classification of a song can be arbitrary and controversial. Moreover, the website <a href="http://everynoise.com/" class="link" target="blank">Everynoise</a>, which classified almost all genres and sub-genres of music, count exactly <b>2.203 different styles of music</b>.
+     </p>
+    <h3>Classification</h3>
+      <p>
+      That being said, we have to focus on genres which are objectively defined, easily recognizable musicaly, without taking into account sub-genres. Following my researches, the list of the 16 main musical's genres the most relevant and complete for us could be : 
+      </p>
+      
+    <div class="container">
+        <div class="row">
+          <div class="two columns">
+          <ul>
+            <li>Blues</li>
+            <li>Classical</li>
+            <li>Disco</li>
+            <li>Easy-listening</li>
+          </ul>
+          </div>
+          <div class="two columns">
+            <ul>
+            <li>Electronic</li>
+            <li>Funk</li>
+            <li>Gospel</li>
+            <li>Hip-Hop</li>
+          </ul>
+          </div>
+          <div class="two columns">
+           <ul>
+            <li>Jazz</li>
+            <li>Pop</li>
+            <li>R&B</li>
+            <li>Reggae</li>
+           </ul>
+          </div>
+          <div class="two columns">
+           <ul>
+            <li>Reggaeton</li>
+            <li>Rock'n'Roll</li>
+            <li>Soul</li>
+            <li>Traditional World music</li>
+           </ul>
+          </div>
+          <div class="two columns">
+            <iframe src="https://giphy.com/embed/sGJHUznQApv9u" width="240" height="150" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+          </div>  
+       </div>
+       </div>
+  
+       <p>
+I know those genres are very generalistic but it's the price to cover the most part of the music field. Each one of those genres includes a lot of sub-genres and the AI will make some shortcuts, classifying for example "Country" as "Traditional world"  or "Metal" as "Rock'n'Roll", at least at the beggining.
+      </p>
+
+    <p>
+      Sources : <a href="https://fr.vikidia.org/wiki/Genre_musical" target="blank" class="link">Vikidia</a>; <a href="https://www.blisshq.com/music-library-management-blog/2011/01/25/fundamental-music-genre-list/" target="blank" class="link">Bliss</a>; <a href="https://en.wikipedia.org/wiki/List_of_popular_music_genres" target="blank" class="link">Wikipédia</a>.
+    </p>
+
+    <h2><i class="fas fa-play"></i> How it works</h2>
+    
+     <h3>Feed the AI</h3>
+    
+      <p>
+Considering the nature of our AI, our machine learning process will use <b>supervised learning</b>. We have to establish and give a large dataset with classifications to the machine. The dataset will contain many musics for each genres we defined and the AI will learn from that data. Here's an example for the Hip-Hop genre.     
+     </p>
+    
+    <div class="container">
+     <div class="row">
+       <div class="four columns">
+<table>
+  <tr>
+    <td class="tabtitle">Genre</td>
+    <td class="tabtitle">Artist</td>
+    <td class="tabtitle">Song</td>
+  </tr>
+  <tr>
+    <td>Hip-Hop</td>
+    <td>Eminem</td>
+    <td>Not Afraid</td>
+  </tr>
+  <tr>
+    <td>Hip-Hop</td>
+    <td>Dr. Dre</td>
+    <td>Still Dre</td>
+  </tr>
+  <tr>
+    <td>Hip-Hop</td>
+    <td>Drake</td>
+    <td>God's Plan</td>
+  </tr>
+  <tr>
+    <td>Hip-Hop</td>
+    <td>Nekfeu</td>
+    <td>Plume</td>
+  </tr>
+</table>
+    </div>
+    <div id="tabdescription" class="eight columns">  
+    
+    <p>
+<br><br><br><br>This example shows how it could work. We affect a lot of examples to each genre of music by uploading files and telling to the machine which genre it is for each one. Here we said to the AI : "Not Afraid by Eminem, it's hip-hop music".
+    </p> 
+    </div>
+    </div>
+    </div>
+  
+  <p>
+    Also, music is a particular data because it could be use in many ways. For our needs, I think the most relevant technology could be <b><a href="https://musiclab.chromeexperiments.com/Spectrogram/" class="link" target="blank">spectrograms</a></b>. This technology allows a very precise sound's analysis : frequencies, power and time, it's like a "3D" vision of a sound. Try playing with this little app, you'll have an idea of how it works : <br>
+    
+    <iframe src="https://musiclab.chromeexperiments.com/Spectrogram/" width="1200" height="600"></iframe> 
+
+  </p>
+  
+    <h3>Learning process</h3>
+    
+    <p>The machine will "read" the file we uploaded and will identify objectical caracteristics like the speed, the sonorities, the tones, the beat, the basses, the trebles, etc. From the many examples and their carateristics, the machine will learn to determine a genre from a particular song. <br><br>
+      There is already softwares which are able to read those carateristics, it's the case of DJ's softwares. <a href="https://serato.com/" target="blank" class="link">Serato DJ</a> for example, is able to show the whole structure and the BPM of a music.<br><br>
+      <img id="serato" src="https://image.ibb.co/iXRP0q/Serato-Screenshot.png" alt="Serato-Screenshot" border="0" width="900"><br>
+      Let's have a look to this Serato's screenshot. When we uploaded the song <em>Lady</em> by Modjo (which is a very good <a href="https://www.youtube.com/watch?v=mMfxI3r_LyA" target="blank" class="link">song</a> by the way), it's able to read the musical's caracteristics of the music in a few seconds. Here we can see, from left to right :
+      <ul>
+        <li>The harmonic key : 3A</li>
+        <li>The BPM : 126</li>
+        <li>The graphic analysis of the music's composition : the basses in red, the voices in green, the kick drum in yellow, etc.</li>
+        <li>The beat : the vertical tillers represent the beat of the bar</li>
+    </ul>
+    </p>
+<h2><i class="fas fa-play"></i> Project's model</h2>
+<h3>Shade the results</h3>
+    <p>
+    This technology is very interesting for our project because we know that all genres have their typical musical's components. For example, house music is typically composed of a kick drum sound on each first beat of a bar, of a snare drum every second first beat of a bar, and of a charleston between those beats. </p> 
+
+<div class="container">
+   <div class="row">
+    <div class="six columns">
+      <iframe src="https://open.spotify.com/embed/track/1PdPAfSUz6faT0rszfsJbI" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+     </div>
+     <div class="six columns">
+       <iframe src="https://open.spotify.com/embed/track/3evG0BIqEFMMP7lVJh1cSf" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+     </div>
+   </div>
+  </div>
+
+   <p>
+  <br><b>We can say music's genres are composed by defined patterns of musical's elements. We can conclude that it's possible to teach to an AI how she can link a music to its genre thanks to its proper caracteristics. It's an inductive reasoning.</b> By analyzing a music's structure, the AI will target which genre it's corresponding.
+    </p>
+<ol>
+  
+  <li class="dialog">The AI : "What a good choice of music ! This song is <b id="result">50% electronic, 40% funk, 10% disco</b>, and definitely 100% cool !"</li>
+  <li class="dialog">GARUWHVGT : "Wow, it's the best AI I've ever seen !"</li>
+</ol>
+
+
+    <p>
+    However, let's see a limit of our thinking. Music is art, and a song can contain, thanks god, various inspirations. It is false to classify all songs in a single and only category. I explain myself, if you listen to those songs :
+    </p>
+      
+      
+ <div class="container">
+   <div class="row">
+    <div class="six columns">
+      <iframe width="450" height="315" src="https://www.youtube.com/embed/R8AOAap6_k4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+     </div>
+     <div class="six columns">
+       <iframe width="450" height="315" src="https://www.youtube.com/embed/JQbjS0_ZfJ0?start=45" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+     </div>
+   </div>
+  </div>
+      
+   <p>   
+<br> For the first one, you'll tell me "Yep it's soul music, so what's the point ?", but sometimes it's not as simple. For the second one, we can ask : is it hip-hop ? is it soul ? Well, it's both : soul for the chorus and hip-hop for the verse. Our AI have to take this into account, so it'll we be much more precise if it can detect two or three genres in a single song. For the second example it could say something like <em>"This music is 70% hip-hop and 30% soul."</em>
+    </p>
+    
+  <h3>Let's summarize</h3>
+   <p>
+  Here's the summary of our AI's development :
+
+  <ol>
+    <li>We give the AI a large dataset of songs telling for each one what genre it is;</li>
+    <li>The AI analyzes the structure of each songs (speed, beat, tones, etc.);</li>
+    <li>The AI learns and integrates the different musical's patterns of each genre thanks to the dataset;</li>
+    <li>The AI knows what musical's caracteristics define a genre's belonging. It is now able to identify a song's genres;</li>
+    <li>We can upload a song on the platform and it'll tell the different genres identified.</li>
+  </ol>
+     </p>
+
+<h2><i class="fas fa-play"></i> Project's model</h2>
+
+<p>
+  Through this little dialog you'll discover the user experience of this AI's project :  
+</p>
+
+<ol>
+  <li class="dialog">Garry, A Random User Which Has Very Good Tastes : *upload the song Like Sugar by Chaka Khan on the platform* </li>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RecY5iZn6B0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <li class="dialog">The AI : *Analyze the music*</li>
+  <li class="dialog">The AI : "What a good choice of music ! This song is <b id="result">50% electronic, 40% funk, 10% disco</b>, and definitely 100% cool !"</li>
+  <li class="dialog">GARUWHVGT : "Wow, it's the best AI I've ever seen !"</li>
+</ol>
+
+<h2><i class="fas fa-play"></i> Beyond the project</h2>
+  
+ <h3>Opportunities</h3>
+
+<p>
+This AI could be publish on the web and trained by users. It could be open and every surfer could upload a song and precise its genre in order to extend the AI's dataset : the bigger its library gets, the more effective it is. Also, in a second time we could add a lot of other genres of music and the program will be able to define more and more precise shades of genres.
+</p>
+<p>
+For music streaming platforms and other softwares which process musical's data, it can be a very powerful tool. In fact, for business as Spotify or Apple Music, playlists and suggestions' algorithms are determining factors to attract and retain customers. Such an AI, if it improves itself, could be a very competitive asset.
+</p>
+
+ <h3>Limits</h3>
+<p>
+  Taking into account that music is an artistic field, it's not always possible to put creations in boxes. A music can be totally creative and count many different styles, or even be out of every genres. Art as a lot of subjective aspects, it's not an exact science, and music is constantly evolving, which can lead to arbitrary or false results. 
+</p>
+
+<h2><i class="fas fa-play"></i> Thanks for your attention</h2>
+
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/TCSzL5-SPHM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+
+<p>
+  <br>Is it rock ? Is it soul ? <br><br>
+  <em>Musically yours,<br>
+  Ziqi LIU</em>
+</p>
+
+</body>
+</html>
